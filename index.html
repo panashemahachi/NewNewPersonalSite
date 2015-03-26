@@ -6,7 +6,6 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/app.scss">
 	<link rel='stylesheet' type="text/css" href='js/nprogress.css'/>
-
 </head>
 <body>
 <script type="text/x-handlebars">
@@ -20,6 +19,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+          {{#link-to 'index' class="navbar-brand"}}<img src="imgs/pkm.png" class="img-responsive pkm"/>{{/link-to}}
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -70,13 +70,14 @@
 </div>
 
 <div class="about">
+<h1 class="text-center">{{aboutme}}</h1>
+
 <div class="col-md-4">
 
 <img {{bind-attr src='picture'}} class="img-responsive"/>
 </div>
 
 <div class="col-md-8">
-<h1 class="text-center">{{aboutme}}</h1>
 <p>My name is Panashe Mahachi and I am a first year Computer Science student at the University of Waterloo.</p>
           <p>As a product of the very entrepreneurial Waterloo Region, I constantly look for opportunities to create or contribute to interesting and meaningful projects. I have technical skills as well as valuable soft skills that enable me to take on various roles when trying to
             take on a challenge.</p>
@@ -99,6 +100,8 @@
 <h4>Check out my <a target="_blank" {{bind-attr href="github"}}>github</a></h4>
 {{/if}}
 {{/each}}
+
+<center><img src="imgs/ruby-green.png" class="img-responsive ruby"/></center>
 </div>
 
 <div>
@@ -148,8 +151,12 @@
 <h1>{{sectionText}}</h1>
 <h4>{{working}}</h4>
 <h4>... right now i am learning / using {{tools}}</h4>
+<hr>
+<h4>... nothing here as of now</h4>
 {{/if}}
 {{/each}}
+<h5 style="display:inline">Ping me to inform me you like the design of the website and I should onto designing other things</h5>
+<a href="#" class="btn btn-success" style="display:inline">Ping me!</a>
 </div>
 </script>
 

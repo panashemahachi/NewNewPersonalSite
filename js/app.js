@@ -144,7 +144,7 @@ App.AboutController = Ember.Controller.extend({
 	firstname: firstname,
 	lastname: lastname,
 	school: 'University of Waterloo',
-	major: 'Computer Science',
+	major: 'Computer Science (First Year)',
 	pronounciation: 'panashh mahahchi',
 	mydescription: ['Lover of technology and an individual intrigued by startup founders'],
 	picture: 'imgs/profile.png',

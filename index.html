@@ -5,7 +5,7 @@
 	<title>Panashe Mahachi | Hacker and Entrepreneur</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/app.scss">
-	<link rel='stylesheet' type="text/css" href='js/nprogress.css'/>
+	<link rel='stylesheet' type="text/css" href='css/nprogress.css'/>
 </head>
 <body>
 <script type="text/x-handlebars">
@@ -75,9 +75,11 @@
 <hr>
 <h4>School: {{school}}</h4>
 <h4>Major: {{major}}</h4>
+<center><a href="#more-about"><img src="imgs/more.png" class="img-responsive ruby" style="margin-top:-20px"/></a></center>
+
 </div>
 
-<div class="about">
+<div class="about" id="more-about">
 <h1 class="text-center">{{aboutme}}</h1>
 
 <div class="col-md-4">
@@ -109,10 +111,10 @@
 {{/if}}
 {{/each}}
 
-<center><img src="imgs/ruby-green.png" class="img-responsive ruby"/></center>
+<center><a href="#more-exp"><img src="imgs/ruby-green.png" class="img-responsive ruby"/></a></center>
 </div>
 
-<h1 class="text-center">technical work experience</h1>
+<h1 class="text-center" id="more-exp">technical work experience</h1>
 <hr>
 {{#each}}
 {{#if work}}
@@ -182,7 +184,7 @@
 
 {{/if}}
 {{/each}}
-<h2 class="text-center">...also this website...but you already know...</h2>
+<h2 class="text-center">...also this website and other iterations...but you already know...</h2>
 
 <h1 class="text-center">app development</h1>
 <hr>
@@ -280,5 +282,6 @@
 	<script src="js/handlebars-helpers.js"></script>
 	<script src="js/app.js"></script>
 	<script src='js/nprogress.js'></script>
+	<script src='js/appjquery.js'></script>
 </body>
 </html>

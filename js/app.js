@@ -148,7 +148,8 @@ App.AboutController = Ember.Controller.extend({
 	pronounciation: 'panashh mahahchi',
 	mydescription: ['Lover of technology and an individual intrigued by startup founders'],
 	picture: 'imgs/profile.png',
-	aboutme: 'about me'
+	aboutme: 'about me',
+	aboutmeText: ['My name is Panashe Mahachi and I am a first year Computer Science student at the University of Waterloo.','As a product of the very entrepreneurial Waterloo Region, I constantly look for opportunities to create or contribute to interesting and meaningful projects. I have technical skills as well as valuable soft skills that enable me to take on various roles when trying to						take on a challenge.','I am passionate about learning technology, productivity and social problems.','In my spare time I love reading finance/technology related articles, working on projects and watching fireside chats.']
 
 });
 

@@ -20,6 +20,9 @@
 
 </head>
 <body>
+<script>
+$('.collapse').collapse()
+</script>
 	<script type="text/x-handlebars">
 
 		<nav class="navbar navbar-default navbar-static-top">
@@ -67,9 +70,9 @@
 				<img src="imgs/bardesign2-2.png" class="img-responsive"/>
 			</div></center>
 			<h3 class="text-center short-description">{{shortdescription}}</h3>
-			<h6 class="text-center social"><a target="_blank" {{bind-attr href="twitter"}}>twitter</a>&nbsp;|&nbsp;
-				<a target="_blank" {{bind-attr href="linkedin"}}>linkedin</a>&nbsp;|&nbsp;
-				<a target="_blank" {{bind-attr href="github"}}>github</a>&nbsp;|&nbsp;
+			<h6 class="text-center social"><a target="_blank" {{bind-attr href="twitter"}}>twitter&nbsp;|&nbsp;</a>
+				<a target="_blank" {{bind-attr href="linkedin"}}>linkedin&nbsp;|&nbsp;</a>
+				<a target="_blank" {{bind-attr href="github"}}>github&nbsp;|&nbsp;</a>
 				<a target="_blank" {{bind-attr href="quora"}}>quora</a></h6>
 				<div class="bardesign3">
 					<img src="imgs/bardesign3.png" class="img-responsive"/>
@@ -104,12 +107,9 @@
 				</div>
 
 				<div class="col-md-8">
-					<p>My name is Panashe Mahachi and I am a first year Computer Science student at the University of Waterloo.</p>
-					<p>As a product of the very entrepreneurial Waterloo Region, I constantly look for opportunities to create or contribute to interesting and meaningful projects. I have technical skills as well as valuable soft skills that enable me to take on various roles when trying to
-						take on a challenge.</p>
-						<p>I am passionate about learning technology, productivity and social problems.</p>
-						<p>In my spare time I love reading finance/technology related articles, working on projects and watching fireside chats.</p>
-
+				{{#each desc in aboutmeText}}
+					<p>{{desc}}</p>
+					{{/each}}
 					</div>
 				</div>
 			</script>
@@ -298,6 +298,6 @@
 			<script src="js/handlebars-helpers.js"></script>
 			<script src="js/app.js"></script>
 			<script src='js/nprogress.js'></script>
-			<script src='js/appjquery.js'></script>
+			<script src='js/bootstrap.min.js'></script>
 		</body>
 		</html>

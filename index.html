@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>Panashe Mahachi &bull; Hacker and Entrepreneur</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/app.scss">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
 	<link rel='stylesheet' type="text/css" href='css/nprogress.css'/>
 </head>
 <body>
@@ -33,15 +33,16 @@
 			</div>
 		</nav>
 
-
 		<div class="container">
 			{{outlet}}
-		</div>
-		<footer>
-			<div class="container">
-				<h6 class="text-center">built by panashe mahachi w/ ember.js</h6>
 			</div>
-		</footer>
+			<div class="container">
+		<div class="row footer">
+				<h6 class="text-center">built by panashe mahachi w/ ember.js</h6>
+				</div>
+				</div>
+				</div>
+
 	</script>
 	<!-- Home -->
 	<script type="text/x-handlebars" data-template-name="index">
@@ -62,6 +63,10 @@
 					<img src="imgs/bardesign3.png" class="img-responsive"/>
 				</div>
 
+				<div class="site-links">
+			
+				<h6><a target="_blank" href="old/index.html">view my old site</a></h6>
+				</div>
 
 			</div>
 		</script>
@@ -76,7 +81,6 @@
 				<h4>School: {{school}}</h4>
 				<h4>Major: {{major}}</h4>
 				<center><a href="#more-about"><img src="imgs/more.png" class="img-responsive ruby" style="margin-top:-20px"/></a></center>
-
 			</div>
 
 			<div class="about" id="more-about">
@@ -115,12 +119,12 @@
 				</div>
 
 				<h1 class="text-center" id="more-exp">technical work experience</h1>
-				<hr>
+<hr width="30%;">
 				{{#each}}
 				{{#if work}}
 
-				<div id="wrap">        
-					<div class="row well">
+				<div id="wrap">
+				<div class="row">        
 						<div class="col-md-4 img-bg">
 							<center><img  class="media-object dp img-responsive" {{bind-attr src=img }} /></center>
 						</div>
@@ -141,22 +145,22 @@
 								</div>
 							</div>
 						</div>
-					</div>
+						</div>
 				</div>
-
+<hr width="30%;">
 
 				{{/if}}
 				{{/each}}
 
 				<!-- gbtt clean this up and combine both templates -->
 				<h1 class="text-center">(completed) projects</h1>
-				<hr>
-				<h1 class="text-center">web development</h1>
+<hr width="30%;">
+				<h1 class="text-center project-title">web development</h1>
 				{{#each}}
 				{{#if web}}
 
 				<div id="wrap">        
-					<div class="row well">
+					<div class="row">
 						<div class="col-md-4 img-bg" >
 							<img  class="media-object dp img-responsive" {{bind-attr src=img }} />
 						</div>
@@ -180,19 +184,19 @@
 						</div>
 					</div>
 				</div>
-
+<hr width="30%;">
 
 				{{/if}}
 				{{/each}}
 				<h2 class="text-center">...also this website and other iterations...but you already know...</h2>
 
-				<h1 class="text-center">app development</h1>
-				<hr>
+				<h1 class="text-center project-title">app development</h1>
+<hr width="30%;">
 				{{#each}}
 				{{#if app}}
 
 				<div id="wrap">        
-					<div class="row well">
+					<div class="row">
 						<div class="col-md-4 img-bg" >
 							<img  class="media-object dp img-responsive" {{bind-attr src=img }} />
 						</div>
@@ -216,18 +220,18 @@
 						</div>
 					</div>
 				</div>
-
+<hr width="30%;">
 				{{/if}}
 				{{/each}}
 				<h2 class="text-center">...i have a whole bunch of unfinished / ongoing projects on github... </h2>
 
-				<h1 class="text-center">non-technical work experience</h1>
-				<hr>
+				<h1 class="text-center project-title">non-technical work experience</h1>
+<hr width="30%;">
 				{{#each}}
 				{{#if nonTech}}
 
 				<div id="wrap">        
-					<div class="row well">
+					<div class="row">
 						<div class="col-md-4 img-bg">
 							<center><img  class="media-object dp img-responsive" {{bind-attr src=img }} /></center>
 						</div>
@@ -250,7 +254,7 @@
 						</div>
 					</div>
 				</div>
-
+<hr width="30%;">
 				{{/if}}
 				{{/each}}
 

@@ -70,7 +70,7 @@ App.PROJECTS = [{
     title: 'Stuffff',
     projectDescription: 'To get practice with AWS I created a file storage system that allowed my friends and I to store our files in the cloud safely.  Features included optional sharing between users and the public.  (The project was essentially Dropbox).',
     quickDescription: 'AWS File Storage System',
-    img: 'imgs/Stuffff.png',
+    img: 'imgs/stuffff2.png',
     link: 'http://stuffff.herokuapp.com',
     github: 'https://github.com/panashemahachi/Stuffff',
     skillsUsed: ['AWS','Rails', 'jQuery', 'HTML/CSS/SASS'],

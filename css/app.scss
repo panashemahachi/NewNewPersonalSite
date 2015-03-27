@@ -3,6 +3,9 @@
   font-family: "Open Sans";
 }
 
+a:hover{
+  text-decoration: none;
+}
 .navbar-default .navbar-nav>li>a{
   margin-top: 0px;
   color:#bdc3c7;
@@ -55,12 +58,11 @@ a.active{
 }
 
 .name{
-  padding-top: 10%;
   font-size: 4em;
 }
 
 .jumbotron{
-  height:100vh;
+  height:80vh;
 }
 footer{
   margin:15px;
@@ -81,7 +83,6 @@ h1{
   .navbar-brand{
     display: none;
   }
-
 }
 
 .ruby{
@@ -91,4 +92,45 @@ h1{
 
 .fa{
   font-weight: 100;
+}
+
+p{
+  color:#7f8c8d;
+  font-size: 1.2em;
+}
+
+footer{
+  position: relative;
+  bottom: 0;
+  min-width: 100%;
+  left:0;
+  right:0;
+  padding:15px;
+}
+
+.index-wrapper{
+  height:68vh;
+}
+
+.img-bg{
+  background-color:white !important;
+  min-height: 10em;
+}
+
+.img-bg img{
+  vertical-align: middle;
+  margin-top: 10%;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #86E2D5;
+    height:0.3em;
+    width: 2em;
+}
+
+.navbar-default .navbar-toggle:hover{
+  background-color:white;
+}
+.navbar-default .navbar-toggle{
+  border-color:white;
 }

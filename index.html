@@ -4,25 +4,22 @@
 	<meta charset="utf-8">
 	<title>Panashe Mahachi &bull; Hacker and Entrepreneur</title>
 	<meta name="Keywords" content="computer science, student, Panashe, Mahachi, junior achievement, moocs, software">
-  	<meta name="description" content="Panashe Mahachi, student at the University of Waterloo">
+	<meta name="description" content="Panashe Mahachi, student at the University of Waterloo">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/app.css">
 	<link rel='stylesheet' type="text/css" href='css/nprogress.css'/>
 
 	<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-53148816-1', 'auto');
-  ga('send', 'pageview');
-</script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-53148816-1', 'auto');
+		ga('send', 'pageview');
+	</script>
 
 </head>
 <body>
-<script>
-$('.collapse').collapse()
-</script>
 	<script type="text/x-handlebars">
 
 		<nav class="navbar navbar-default navbar-static-top">
@@ -50,254 +47,253 @@ $('.collapse').collapse()
 
 		<div class="container">
 			{{outlet}}
-			</div>
-			<div class="container">
-		<div class="row footer">
+		</div>
+		<div class="container">
+			<div class="row footer">
 				<h6 class="text-center">built by panashe mahachi w/ ember.js</h6>
+			</div>
+		</div>
+	</div>
+
+</script>
+
+<!-- Home -->
+<script type="text/x-handlebars" data-template-name="index">
+	<div class="index-wrapper">
+		<div class="col-md-4 col-md-offset-4 bardesign">
+			<img src="imgs/bardesign-2.png" class="img-responsive"/>
+		</div>
+		<h1 class="text-center fullname">{{fullname}}</h1>
+		<center><div class="bardesign2">
+			<img src="imgs/bardesign2-2.png" class="img-responsive"/>
+		</div></center>
+		<h3 class="text-center short-description">{{shortdescription}}</h3>
+		<h6 class="text-center social"><a target="_blank" {{bind-attr href="twitter"}}>twitter&nbsp;|&nbsp;</a>
+			<a target="_blank" {{bind-attr href="linkedin"}}>linkedin&nbsp;|&nbsp;</a>
+			<a target="_blank" {{bind-attr href="github"}}>github&nbsp;|&nbsp;</a>
+			<a target="_blank" {{bind-attr href="quora"}}>quora</a></h6>
+			<div class="bardesign3">
+				<img src="imgs/bardesign3.png" class="img-responsive"/>
+			</div>
+
+			<div class="site-links">
+
+				<h6><a target="_blank" href="old/index.html">view my old site</a></h6>
+			</div>
+
+		</div>
+	</script>
+
+	<!-- About -->
+	<script type="text/x-handlebars" data-template-name="about">
+		<div class="jumbotron">
+			<h1 class="name">{{firstname}} &bull; {{lastname}}</h1>
+			<h4><i>Pronounciation: {{pronounciation}}</i></h4>
+			<h4><i>Noun: {{mydescription}}</i></h4>
+			<hr>
+			<h4>School: {{school}}</h4>
+			<h4>Major: {{major}}</h4>
+			<center><a href="#more-about"><img src="imgs/more.png" class="img-responsive ruby" style="margin-top:-20px"/></a></center>
+		</div>
+
+		<div class="about" id="more-about">
+			<h1 class="text-center">{{aboutme}}</h1>
+
+			<div class="col-md-4">
+				<img {{bind-attr src='picture'}} class="img-responsive"/>
+			</div>
+
+			<div class="col-md-8">
+				{{#each desc in aboutmeText}}
+				<p>{{desc}}</p>
+				{{/each}}
+			</div>
+		</div>
+	</script>
+
+	<!-- Projects -->
+	<script type="text/x-handlebars" data-template-name="projects">
+		<div class="jumbotron">
+			{{#each}}
+			{{#if description}}
+			<h1>{{sectionText}}</h1>
+			<h4>when coding I work with {{knownLanguages}}</h4>
+			<h4>...and I use {{platforms}}</h4>
+			<hr>
+			<h4>Check out my <a target="_blank" {{bind-attr href="github"}}>github</a></h4>
+			{{/if}}
+			{{/each}}
+
+			<center><a href="#more-exp"><img src="imgs/ruby-green.png" class="img-responsive ruby"/></a></center>
+		</div>
+
+		<h1 class="text-center" id="more-exp">technical work experience</h1>
+		<hr class="thinner-hr">
+		{{#each}}
+		{{#if work}}
+
+		<div id="wrap">
+			<div class="row">        
+				<div class="col-md-4 img-bg">
+					<center><img  class="media-object dp img-responsive" {{bind-attr src=img }} /></center>
 				</div>
+				<div class="col-md-8">
+					<div class="media">          
+						<div class="media-body">
+							<h3 class="media-heading">{{title}} <small> {{role}}</small></h3>
+							<p>{{roleDescription}}</p>
+							<hr style="margin:8px auto">
+
+							Skills Developed/Utilized: &nbsp;
+							{{#each skill in skillsUsed}}
+							<span class="label label-default ">{{skill}}</span>
+							{{/each}}
+							&nbsp;Key Links: &nbsp;
+
+							<a {{bind-attr href=link}}><span class="label label-default ">Website</span></a>
+						</div>
+					</div>
 				</div>
+			</div>
+		</div>
+		<hr class="thinner-hr">
+
+		{{/if}}
+		{{/each}}
+
+		<!-- gbtt clean this up and combine both templates -->
+		<h1 class="text-center">(completed) projects</h1>
+		<hr class="thinner-hr">
+		<h1 class="text-center project-title">web development</h1>
+		{{#each}}
+		{{#if web}}
+
+		<div id="wrap">        
+			<div class="row">
+				<div class="col-md-4 img-bg" >
+					<img  class="media-object dp img-responsive" {{bind-attr src=img }} />
 				</div>
+				<div class="col-md-8">
+					<div class="media">          
+						<div class="media-body">
+							<h3 class="media-heading">{{title}} <small> {{quickDescription}}</small></h3>
+							<p>{{projectDescription}}</p>
+							<hr style="margin:8px auto">
+
+							Skills Developed/Utilized: &nbsp;
+							{{#each skill in skillsUsed}}
+							<span class="label label-default ">{{skill}}</span>
+							{{/each}}
+							&nbsp;Key Links: &nbsp;
+
+							<a {{bind-attr href=github }}><span class="label label-default ">Github</span></a>
+							<a {{bind-attr href=link}}><span class="label label-default ">See It!</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr class="thinner-hr">
+
+		{{/if}}
+		{{/each}}
+		<h2 class="text-center">...also this website and other iterations...but you already know...</h2>
+
+		<h1 class="text-center project-title">app development</h1>
+		<hr class="thinner-hr">
+		{{#each}}
+		{{#if app}}
+
+		<div id="wrap">        
+			<div class="row">
+				<div class="col-md-4 img-bg" >
+					<img  class="media-object dp img-responsive" {{bind-attr src=img }} />
+				</div>
+				<div class="col-md-8">
+					<div class="media">          
+						<div class="media-body">
+							<h3 class="media-heading">{{title}} <small> {{quickDescription}}</small></h3>
+							<p>{{projectDescription}}</p>
+							<hr style="margin:8px auto">
+
+							Skills Developed/Utilized: &nbsp;
+							{{#each skill in skillsUsed}}
+							<span class="label label-default ">{{skill}}</span>
+							{{/each}}
+							&nbsp;Key Links: &nbsp;
+
+							<a {{bind-attr href=github }}><span class="label label-default ">Github</span></a>
+							<a {{bind-attr href=link}}><span class="label label-default ">See It!</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr class="thinner-hr">
+		{{/if}}
+		{{/each}}
+		<h2 class="text-center">...i have a whole bunch of unfinished / ongoing projects on github... </h2>
+
+		<h1 class="text-center project-title">non-technical work experience</h1>
+		<hr class="thinner-hr">
+		{{#each}}
+		{{#if nonTech}}
+
+		<div id="wrap">        
+			<div class="row">
+				<div class="col-md-4 img-bg">
+					<center><img  class="media-object dp img-responsive" {{bind-attr src=img }} /></center>
+				</div>
+				<div class="col-md-8">
+					<div class="media">          
+						<div class="media-body">
+							<h3 class="media-heading">{{title}} <small> {{role}}</small></h3>
+							<p>{{roleDescription}}</p>
+							<hr style="margin:8px auto">
+
+							Skills Developed/Utilized: &nbsp;
+							{{#each skill in skillsUsed}}
+							<span class="label label-default ">{{skill}}</span>
+							{{/each}}
+							&nbsp;Key Links: &nbsp;
+
+							<a {{bind-attr href=link}}><span class="label label-default ">Website</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr class="thinner-hr">
+		{{/if}}
+		{{/each}}
 
 	</script>
-	<!-- Home -->
-	<script type="text/x-handlebars" data-template-name="index">
-		<div class="index-wrapper">
-			<div class="col-md-4 col-md-offset-4 bardesign">
-				<img src="imgs/bardesign-2.png" class="img-responsive"/>
-			</div>
-			<h1 class="text-center fullname">{{fullname}}</h1>
-			<center><div class="bardesign2">
-				<img src="imgs/bardesign2-2.png" class="img-responsive"/>
-			</div></center>
-			<h3 class="text-center short-description">{{shortdescription}}</h3>
-			<h6 class="text-center social"><a target="_blank" {{bind-attr href="twitter"}}>twitter&nbsp;|&nbsp;</a>
-				<a target="_blank" {{bind-attr href="linkedin"}}>linkedin&nbsp;|&nbsp;</a>
-				<a target="_blank" {{bind-attr href="github"}}>github&nbsp;|&nbsp;</a>
-				<a target="_blank" {{bind-attr href="quora"}}>quora</a></h6>
-				<div class="bardesign3">
-					<img src="imgs/bardesign3.png" class="img-responsive"/>
-				</div>
 
-				<div class="site-links">
-			
-				<h6><a target="_blank" href="old/index.html">view my old site</a></h6>
-				</div>
+	<!-- Designs -->
+	<script type="text/x-handlebars" data-template-name="designs">
+		<div class="jumbotron">
+			{{#each}}
+			{{#if description}}
+			<h1>{{sectionText}}</h1>
+			<h4>{{working}}</h4>
+			<h4>... right now i am learning / using {{tools}}</h4>
+			<hr>
+			<h4>... nothing here as of now</h4>
+			{{/if}}
+			{{/each}}
+			<h5 style="display:inline">Ping me to inform me you like the design of the website and I should onto designing other things</h5>
+			<a href="#" class="btn btn-success btn-sm" style="display:inline">Ping me!</a>
+		</div>
+	</script>
 
-			</div>
-		</script>
-
-		<!-- About -->
-		<script type="text/x-handlebars" data-template-name="about">
-			<div class="jumbotron">
-				<h1 class="name">{{firstname}} &bull; {{lastname}}</h1>
-				<h4><i>Pronounciation: {{pronounciation}}</i></h4>
-				<h4><i>Noun: {{mydescription}}</i></h4>
-				<hr>
-				<h4>School: {{school}}</h4>
-				<h4>Major: {{major}}</h4>
-				<center><a href="#more-about"><img src="imgs/more.png" class="img-responsive ruby" style="margin-top:-20px"/></a></center>
-			</div>
-
-			<div class="about" id="more-about">
-				<h1 class="text-center">{{aboutme}}</h1>
-
-				<div class="col-md-4">
-
-					<img {{bind-attr src='picture'}} class="img-responsive"/>
-				</div>
-
-				<div class="col-md-8">
-				{{#each desc in aboutmeText}}
-					<p>{{desc}}</p>
-					{{/each}}
-					</div>
-				</div>
-			</script>
-
-			<!-- Projects -->
-			<script type="text/x-handlebars" data-template-name="projects">
-				<div class="jumbotron">
-					{{#each}}
-					{{#if description}}
-					<h1>{{sectionText}}</h1>
-					<h4>when coding I work with {{knownLanguages}}</h4>
-					<h4>...and I use {{platforms}}</h4>
-					<hr>
-					<h4>Check out my <a target="_blank" {{bind-attr href="github"}}>github</a></h4>
-					{{/if}}
-					{{/each}}
-
-					<center><a href="#more-exp"><img src="imgs/ruby-green.png" class="img-responsive ruby"/></a></center>
-				</div>
-
-				<h1 class="text-center" id="more-exp">technical work experience</h1>
-<hr width="30%;">
-				{{#each}}
-				{{#if work}}
-
-				<div id="wrap">
-				<div class="row">        
-						<div class="col-md-4 img-bg">
-							<center><img  class="media-object dp img-responsive" {{bind-attr src=img }} /></center>
-						</div>
-						<div class="col-md-8">
-							<div class="media">          
-								<div class="media-body">
-									<h3 class="media-heading">{{title}} <small> {{role}}</small></h3>
-									<p>{{roleDescription}}</p>
-									<hr style="margin:8px auto">
-
-									Skills Developed/Utilized: &nbsp;
-									{{#each skill in skillsUsed}}
-									<span class="label label-default ">{{skill}}</span>
-									{{/each}}
-									&nbsp;Key Links: &nbsp;
-
-									<a {{bind-attr href=link}}><span class="label label-default ">Website</span></a>
-								</div>
-							</div>
-						</div>
-						</div>
-				</div>
-<hr width="30%;">
-
-				{{/if}}
-				{{/each}}
-
-				<!-- gbtt clean this up and combine both templates -->
-				<h1 class="text-center">(completed) projects</h1>
-<hr width="30%;">
-				<h1 class="text-center project-title">web development</h1>
-				{{#each}}
-				{{#if web}}
-
-				<div id="wrap">        
-					<div class="row">
-						<div class="col-md-4 img-bg" >
-							<img  class="media-object dp img-responsive" {{bind-attr src=img }} />
-						</div>
-						<div class="col-md-8">
-							<div class="media">          
-								<div class="media-body">
-									<h3 class="media-heading">{{title}} <small> {{quickDescription}}</small></h3>
-									<p>{{projectDescription}}</p>
-									<hr style="margin:8px auto">
-
-									Skills Developed/Utilized: &nbsp;
-									{{#each skill in skillsUsed}}
-									<span class="label label-default ">{{skill}}</span>
-									{{/each}}
-									&nbsp;Key Links: &nbsp;
-
-									<a {{bind-attr href=github }}><span class="label label-default ">Github</span></a>
-									<a {{bind-attr href=link}}><span class="label label-default ">See It!</span></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-<hr width="30%;">
-
-				{{/if}}
-				{{/each}}
-				<h2 class="text-center">...also this website and other iterations...but you already know...</h2>
-
-				<h1 class="text-center project-title">app development</h1>
-<hr width="30%;">
-				{{#each}}
-				{{#if app}}
-
-				<div id="wrap">        
-					<div class="row">
-						<div class="col-md-4 img-bg" >
-							<img  class="media-object dp img-responsive" {{bind-attr src=img }} />
-						</div>
-						<div class="col-md-8">
-							<div class="media">          
-								<div class="media-body">
-									<h3 class="media-heading">{{title}} <small> {{quickDescription}}</small></h3>
-									<p>{{projectDescription}}</p>
-									<hr style="margin:8px auto">
-
-									Skills Developed/Utilized: &nbsp;
-									{{#each skill in skillsUsed}}
-									<span class="label label-default ">{{skill}}</span>
-									{{/each}}
-									&nbsp;Key Links: &nbsp;
-
-									<a {{bind-attr href=github }}><span class="label label-default ">Github</span></a>
-									<a {{bind-attr href=link}}><span class="label label-default ">See It!</span></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-<hr width="30%;">
-				{{/if}}
-				{{/each}}
-				<h2 class="text-center">...i have a whole bunch of unfinished / ongoing projects on github... </h2>
-
-				<h1 class="text-center project-title">non-technical work experience</h1>
-<hr width="30%;">
-				{{#each}}
-				{{#if nonTech}}
-
-				<div id="wrap">        
-					<div class="row">
-						<div class="col-md-4 img-bg">
-							<center><img  class="media-object dp img-responsive" {{bind-attr src=img }} /></center>
-						</div>
-						<div class="col-md-8">
-							<div class="media">          
-								<div class="media-body">
-									<h3 class="media-heading">{{title}} <small> {{role}}</small></h3>
-									<p>{{roleDescription}}</p>
-									<hr style="margin:8px auto">
-
-									Skills Developed/Utilized: &nbsp;
-									{{#each skill in skillsUsed}}
-									<span class="label label-default ">{{skill}}</span>
-									{{/each}}
-									&nbsp;Key Links: &nbsp;
-
-									<a {{bind-attr href=link}}><span class="label label-default ">Website</span></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-<hr width="30%;">
-				{{/if}}
-				{{/each}}
-
-			</script>
-
-			<!-- Designs -->
-			<script type="text/x-handlebars" data-template-name="designs">
-				<div class="jumbotron">
-					{{#each}}
-					{{#if description}}
-					<h1>{{sectionText}}</h1>
-					<h4>{{working}}</h4>
-					<h4>... right now i am learning / using {{tools}}</h4>
-					<hr>
-					<h4>... nothing here as of now</h4>
-					{{/if}}
-					{{/each}}
-					<h5 style="display:inline">Ping me to inform me you like the design of the website and I should onto designing other things</h5>
-					<a href="#" class="btn btn-success btn-sm" style="display:inline">Ping me!</a>
-				</div>
-			</script>
-
-			<!-- Resume -->
-			<script type="text/x-handlebars" data-template-name="resume">
-			</script>
-			<script src="js/jquery.js"></script>
-			<script src="js/handlebars.js"></script>
-			<script src="js/ember.js"></script>
-			<script src="js/handlebars-helpers.js"></script>
-			<script src="js/app.js"></script>
-			<script src='js/nprogress.js'></script>
-			<script src='js/bootstrap.min.js'></script>
-		</body>
-		</html>
+	<!-- Resume -->
+	<script type="text/x-handlebars" data-template-name="resume">
+	</script>
+	
+	<script src="js/jquery.js"></script>
+	<script src="js/handlebars.js"></script>
+	<script src="js/ember.js"></script>
+	<script src="js/app.js"></script>
+	<script src='js/bootstrap.min.js'></script>
+</body>
+</html>
